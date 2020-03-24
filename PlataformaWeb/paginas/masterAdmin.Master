@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterAdmin.Master.cs" Inherits="PlataformaWeb.paginas.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/fonts/style.css" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="/css/formulario.css">
+</head>
+<body>
+
+    <!-- Barra de navegación-->
+  <nav >
+    <figure class="logo">
+      <img id="logoUsac" src="/img/usac.png" alt="">
+    </figure>
+      <h2>Administrador</h2>
+
+      <a class="logOut" href="/paginas/login.aspx">
+          <span class="icon-squared-cross"></span>
+          Salir            
+      </a>
+     
+     <asp:Label ID="nombreUsuario" runat="server" Text="William Enrique" CssClass="navName"></asp:Label>
+     <span class="icon-user"></span>
+  </nav>
+
+
+  <!-- Barra de Lateral-->
+  <aside class="sidebar">
+    <h2>usac</h2>
+    <ul>
+      <li class="opcion"><span class="icon-home"></span><a href="/paginas/administrador/home.aspx">Home</a></li>
+      <li class="opcion"><span class="icon-users"></span><a href="/paginas/administrador/usuario/lista.aspx">Usuarios</a></li>
+      <li class="opcion"><span class="icon-blackboard"></span><a href="#">Administrar Salones</a></li>
+      <li class="opcion"><span class="icon-laptop "></span><a href="#">Administrar Insumos</a></li>
+      <li class="opcion"><span class="icon-upload "></span><a href="/paginas/administrador/cargar-datos.aspx">Importar Datos</a></li>
+      <li class="opcion"><span class="icon-clipboard "></span><a href="/paginas/administrador/reserva/lista-reservas.aspx">Reservas</a></li>
+    </ul>
+
+  </aside>
+
+  <!-- Contenido de la pagina-->
+  <section class="contenido mostrar">
+    <figure class="menu">
+      <img class="menu-bar"src="/img/menu.png" alt="">
+    </figure>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        <!-- Dentro va contenido-->
+
+    </asp:ContentPlaceHolder>
+
+  </section>
+
+  <!-- Pie de Pagina-->
+  <footer class="piepagina">
+    Facultad de Ingenieria USAC. Derechos Reservados, Teléfono: 43234533
+  </footer>
+
+  <!-- script para agregar la clase 'mostrar' al contenido-->
+  <script src="/js/principal.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.menu-bar').on('click', function(){
+      $('section').toggleClass('mostrar');
+    });
+  </script>
+
+</body>
+</html>

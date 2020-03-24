@@ -1,0 +1,10 @@
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\bin\PlataformaWeb.dll.config
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\bin\PlataformaWeb.dll
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\bin\PlataformaWeb.pdb
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\obj\Debug\PlataformaWeb.csprojResolveAssemblyReference.cache
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\obj\Debug\PlataformaWeb.csproj.CoreCompileInputs.cache
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\obj\Debug\PlataformaWeb.dll
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\obj\Debug\PlataformaWeb.pdb
+C:\Users\William\Desktop\[IPC2]2s2018\[IPC2]Proyecto\Fase2\PlataformaWeb\PlataformaWeb\bin\MessagingToolkit.QRCode.dll

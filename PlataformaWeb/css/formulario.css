@@ -1,0 +1,262 @@
+
+form {
+    width: 450px;
+    margin: auto;
+    margin-top: 30px;
+    background: #eae9e9;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+form .caja {
+    width: 49.3%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+form h2 {
+    margin-left: 20px;
+    font: bold 20px arial;
+    color: #04283a;
+}
+
+form a {
+    display:inline-block;
+    color: #141618;
+    font: normal 14px arial,sans-serif;
+    padding-bottom:5px;
+    padding-right:10px;
+}
+
+#forgot {
+    margin-left: 10%;
+    color: #422b9a;
+    font: normal 0.85em arial,sans-serif;
+    text-decoration: none;
+}
+
+form .cajaTexto {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: none;
+}
+
+.fUpload {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form .cajaLista {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    }
+
+.boton {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+    background: #143b6c;
+    color: #fff;
+    margin-left:10px;
+    margin-bottom: 10px;
+    cursor:pointer;
+}
+
+#boton:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+    }
+}
+
+.mensaje {
+    width: 100%;
+    padding-bottom: 10px;
+    color: darkred;
+    font: normal 0.85em arial,sans-serif;
+}
+
+/*Estilos para tablas formularios -----------------------------------------*/
+.cajaTabla {
+    margin-top: 10px;
+    padding:0px;
+    width: 96%;
+    height: 87%;
+    background: #ededed;
+}
+
+.tituloTabla {
+    margin-left: 20px;
+    font: bold 20px arial;
+    color: #04283a;
+}
+
+.tabla {
+    width: 100%;
+    background: white;
+    margin: 10px 0;
+    font-family: verdana;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tabla .alt{
+    background:#f5f5f5;
+}
+
+.tabla tr:hover {
+    background: #36bbff;
+    color: white;
+    
+}
+
+.tabla tr td{
+    /*Celdas de la tabla*/
+    padding: 10px 0;
+    font-size: 12px;
+    color: #4a4a4a ;
+    border-top:solid 5px #ededed;
+
+}
+
+.tabla th{
+    /*Header de la tabla*/
+    margin-bottom: 20px;
+    height: 40px;   
+    padding: 4px 2px;
+    color: #fff;
+    background:-webkit-linear-gradient(top,#035074, #04283a);
+    /*border-left:solid 1px #525252;*/
+    
+}
+
+.tabla th a{
+    font-family: verdana;
+    text-decoration: none;
+    color: #fff;
+    font-size:13px;
+}
+
+.cabeceraBoton {
+    font: normal 13px verdana;
+    text-decoration: none;
+}
+
+
+.tablaBoton {
+
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-decoration:none;
+    font-size: 16px;
+    background: #1d2124;
+    cursor: pointer;
+    color: #03ff00;
+}
+
+.pieTabla {
+    background: #04283a;
+    width: 100px;
+    color: red;
+}
+
+.tabla .pieTabla:hover {
+    background: #04283a;
+}
+.pieTabla tr:hover {
+    background: #04283a;
+}
+
+.pieTabla table{
+    margin:auto;
+}
+
+
+.pieTabla table td {
+     border:none;
+     color:white;
+     padding: 0 10px;
+     font-weight: bold;
+}
+
+.pieTabla table td a {
+     border:none;
+     color:#c4c4c4;
+     padding: 0 10px;
+     font-weight: bold;
+}
+
+/*Estilos para el calendario -----------------------------------------*/
+
+.calendario {
+}
+
+.tituloCalendario td, .tituloCalendario td a{
+    font-size: 20px;
+}
+
+.diaHeader {
+    background: -webkit-linear-gradient(top,#035074, #04283a);
+    color: white;
+}
+
+.diaHeader th{
+    font-size: 1.1em;
+}
+
+.dia {
+    border: solid 1px #e2e2e2;
+    font-family: Arial;
+    font-size: 0.9em;
+}
+
+.dia a{    
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 0.9em;
+}
+
+.diaHoy {
+    border: solid 1px #e2e2e2;
+}
+
+.diaHoy a {
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+.diaExterno {
+    
+    border: solid 1px #e2e2e2;
+}
+
+.diaExterno a {
+    text-decoration: none;
+}
+
+
+

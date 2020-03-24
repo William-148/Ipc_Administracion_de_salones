@@ -1,0 +1,602 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFC9E496-8FF0-4782-A9C4-7BB20A2DA547}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlataformaWeb</RootNamespace>
+    <AssemblyName>PlataformaWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
+    <None Include="packages.config" />
+    <Content Include="fonts\icomoon.svg" />
+    <Content Include="fonts\style.css" />
+    <Content Include="paginas\administrador\cargar-datos.aspx" />
+    <Content Include="paginas\administrador\home.aspx" />
+    <Content Include="paginas\administrador\reserva\crear.aspx" />
+    <Content Include="paginas\administrador\reserva\lista-reservas.aspx" />
+    <Content Include="paginas\administrador\reserva\ver-reserva.aspx" />
+    <Content Include="paginas\estudiante\actividades\actividades-asistidas.aspx" />
+    <Content Include="paginas\estudiante\actividades\actividades-matriculadas.aspx" />
+    <Content Include="paginas\estudiante\actividades\actividades.aspx" />
+    <Content Include="paginas\estudiante\actividades\buscar.aspx" />
+    <Content Include="paginas\estudiante\actividades\detalle.aspx" />
+    <Content Include="paginas\estudiante\actividades\Lista.aspx" />
+    <Content Include="paginas\estudiante\actividades\ver.aspx" />
+    <Content Include="paginas\estudiante\default.aspx" />
+    <Content Include="paginas\estudiante\home.aspx" />
+    <Content Include="paginas\estudiante\incidentes\incidente-insumo.aspx" />
+    <Content Include="paginas\estudiante\incidentes\incidente-salon.aspx" />
+    <Content Include="paginas\estudiante\insumos\insumos-devueltos.aspx" />
+    <Content Include="paginas\estudiante\insumos\insumos-prestados.aspx" />
+    <Content Include="paginas\instructor\home.aspx" />
+    <Content Include="paginas\instructor\incidentes\incidente-insumo.aspx" />
+    <Content Include="paginas\instructor\incidentes\incidente-salon.aspx" />
+    <Content Include="paginas\instructor\insumos\insumos-devueltos.aspx" />
+    <Content Include="paginas\instructor\insumos\insumos-prestados.aspx" />
+    <Content Include="paginas\instructor\reservas\actividad.aspx" />
+    <Content Include="paginas\instructor\reservas\cuestionario.aspx" />
+    <Content Include="paginas\instructor\reservas\lista-reservas.aspx" />
+    <Content Include="paginas\instructor\reservas\ver-reserva.aspx" />
+    <Content Include="paginas\masterAdmin.Master" />
+    <Content Include="paginas\operador\insumos\lista-incidentes.aspx" />
+    <Content Include="paginas\operador\insumos\lista-prestamo.aspx" />
+    <Content Include="paginas\operador\insumos\editar-prestamo.aspx" />
+    <Content Include="paginas\operador\insumos\prestamo.aspx" />
+    <Content Include="paginas\operador\insumos\editar-incidente.aspx" />
+    <Content Include="paginas\operador\insumos\registrar-incidente.aspx" />
+    <Content Include="paginas\operador\insumos\lista-insumos.aspx" />
+    <Content Include="paginas\operador\operador.Master" />
+    <Content Include="paginas\estudiante\masterEstudiante.Master" />
+    <Content Include="paginas\instructor\masterInstructor.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\formulario.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\style.css" />
+    <Content Include="img\ecys.png" />
+    <Content Include="img\menu.png" />
+    <Content Include="img\usac.png" />
+    <Content Include="js\principal.js" />
+    <Content Include="paginas\login.aspx" />
+    <Content Include="paginas\operador\reserva\crear.aspx" />
+    <Content Include="paginas\operador\reserva\lista-reservas.aspx" />
+    <Content Include="paginas\operador\reserva\ver-reserva.aspx" />
+    <Content Include="paginas\operador\salon\crear-incidente.aspx" />
+    <Content Include="paginas\operador\salon\editar-incidente.aspx" />
+    <Content Include="paginas\operador\salon\lista-incidentes.aspx" />
+    <Content Include="paginas\operador\salon\lista-salones.aspx" />
+    <Content Include="paginas\operador\salon\ver-reservas.aspx" />
+    <Content Include="paginas\operador\usuario\crear.aspx" />
+    <Content Include="paginas\operador\usuario\editar.aspx" />
+    <Content Include="paginas\operador\home.aspx" />
+    <Content Include="paginas\operador\usuario\lista.aspx" />
+    <Content Include="paginas\recuperar-cuenta.aspx" />
+    <Content Include="paginas\registrar.aspx" />
+    <Content Include="paginas\administrador\usuario\crear.aspx" />
+    <Content Include="paginas\administrador\usuario\editar.aspx" />
+    <Content Include="paginas\administrador\usuario\lista.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clases\Actividad.cs" />
+    <Compile Include="clases\Analizador.cs" />
+    <Compile Include="clases\Conexion.cs" />
+    <Compile Include="clases\Correo.cs" />
+    <Compile Include="clases\IncidenteInsumo.cs" />
+    <Compile Include="clases\IncidenteSalon.cs" />
+    <Compile Include="clases\Insumo.cs" />
+    <Compile Include="clases\Pregunta.cs" />
+    <Compile Include="clases\PrestamoInsumo.cs" />
+    <Compile Include="clases\Reservacion.cs" />
+    <Compile Include="clases\Salon.cs" />
+    <Compile Include="clases\Usuario.cs" />
+    <Compile Include="paginas\administrador\cargar-datos.aspx.cs">
+      <DependentUpon>cargar-datos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administrador\cargar-datos.aspx.designer.cs">
+      <DependentUpon>cargar-datos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administrador\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administrador\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administrador\reserva\crear.aspx.cs">
+      <DependentUpon>crear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administrador\reserva\crear.aspx.designer.cs">
+      <DependentUpon>crear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administrador\reserva\lista-reservas.aspx.cs">
+      <DependentUpon>lista-reservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administrador\reserva\lista-reservas.aspx.designer.cs">
+      <DependentUpon>lista-reservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administrador\reserva\ver-reserva.aspx.cs">
+      <DependentUpon>ver-reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administrador\reserva\ver-reserva.aspx.designer.cs">
+      <DependentUpon>ver-reserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\actividades-asistidas.aspx.cs">
+      <DependentUpon>actividades-asistidas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\actividades-asistidas.aspx.designer.cs">
+      <DependentUpon>actividades-asistidas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\actividades-matriculadas.aspx.cs">
+      <DependentUpon>actividades-matriculadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\actividades-matriculadas.aspx.designer.cs">
+      <DependentUpon>actividades-matriculadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\actividades.aspx.cs">
+      <DependentUpon>actividades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\actividades.aspx.designer.cs">
+      <DependentUpon>actividades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\buscar.aspx.cs">
+      <DependentUpon>buscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\buscar.aspx.designer.cs">
+      <DependentUpon>buscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\detalle.aspx.cs">
+      <DependentUpon>detalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\detalle.aspx.designer.cs">
+      <DependentUpon>detalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\Lista.aspx.cs">
+      <DependentUpon>Lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\Lista.aspx.designer.cs">
+      <DependentUpon>Lista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\ver.aspx.cs">
+      <DependentUpon>ver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\actividades\ver.aspx.designer.cs">
+      <DependentUpon>ver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\incidentes\incidente-insumo.aspx.cs">
+      <DependentUpon>incidente-insumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\incidentes\incidente-insumo.aspx.designer.cs">
+      <DependentUpon>incidente-insumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\incidentes\incidente-salon.aspx.cs">
+      <DependentUpon>incidente-salon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\incidentes\incidente-salon.aspx.designer.cs">
+      <DependentUpon>incidente-salon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\insumos\insumos-devueltos.aspx.cs">
+      <DependentUpon>insumos-devueltos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\insumos\insumos-devueltos.aspx.designer.cs">
+      <DependentUpon>insumos-devueltos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\insumos\insumos-prestados.aspx.cs">
+      <DependentUpon>insumos-prestados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\insumos\insumos-prestados.aspx.designer.cs">
+      <DependentUpon>insumos-prestados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\estudiante\masterEstudiante.Master.cs">
+      <DependentUpon>masterEstudiante.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\estudiante\masterEstudiante.Master.designer.cs">
+      <DependentUpon>masterEstudiante.Master</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\incidentes\incidente-insumo.aspx.cs">
+      <DependentUpon>incidente-insumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\incidentes\incidente-insumo.aspx.designer.cs">
+      <DependentUpon>incidente-insumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\incidentes\incidente-salon.aspx.cs">
+      <DependentUpon>incidente-salon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\incidentes\incidente-salon.aspx.designer.cs">
+      <DependentUpon>incidente-salon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\insumos\insumos-devueltos.aspx.cs">
+      <DependentUpon>insumos-devueltos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\insumos\insumos-devueltos.aspx.designer.cs">
+      <DependentUpon>insumos-devueltos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\insumos\insumos-prestados.aspx.cs">
+      <DependentUpon>insumos-prestados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\insumos\insumos-prestados.aspx.designer.cs">
+      <DependentUpon>insumos-prestados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\masterInstructor.Master.cs">
+      <DependentUpon>masterInstructor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\masterInstructor.Master.designer.cs">
+      <DependentUpon>masterInstructor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\reservas\actividad.aspx.cs">
+      <DependentUpon>actividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\reservas\actividad.aspx.designer.cs">
+      <DependentUpon>actividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\reservas\cuestionario.aspx.cs">
+      <DependentUpon>cuestionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\reservas\cuestionario.aspx.designer.cs">
+      <DependentUpon>cuestionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\reservas\lista-reservas.aspx.cs">
+      <DependentUpon>lista-reservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\reservas\lista-reservas.aspx.designer.cs">
+      <DependentUpon>lista-reservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\instructor\reservas\ver-reserva.aspx.cs">
+      <DependentUpon>ver-reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\instructor\reservas\ver-reserva.aspx.designer.cs">
+      <DependentUpon>ver-reserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\masterAdmin.Master.cs">
+      <DependentUpon>masterAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\masterAdmin.Master.designer.cs">
+      <DependentUpon>masterAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\lista-incidentes.aspx.cs">
+      <DependentUpon>lista-incidentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\lista-incidentes.aspx.designer.cs">
+      <DependentUpon>lista-incidentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\lista-prestamo.aspx.cs">
+      <DependentUpon>lista-prestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\lista-prestamo.aspx.designer.cs">
+      <DependentUpon>lista-prestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\editar-prestamo.aspx.cs">
+      <DependentUpon>editar-prestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\editar-prestamo.aspx.designer.cs">
+      <DependentUpon>editar-prestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\prestamo.aspx.cs">
+      <DependentUpon>prestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\prestamo.aspx.designer.cs">
+      <DependentUpon>prestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\editar-incidente.aspx.cs">
+      <DependentUpon>editar-incidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\editar-incidente.aspx.designer.cs">
+      <DependentUpon>editar-incidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\registrar-incidente.aspx.cs">
+      <DependentUpon>registrar-incidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\registrar-incidente.aspx.designer.cs">
+      <DependentUpon>registrar-incidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\lista-insumos.aspx.cs">
+      <DependentUpon>lista-insumos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\insumos\lista-insumos.aspx.designer.cs">
+      <DependentUpon>lista-insumos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\operador.Master.cs">
+      <DependentUpon>operador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\operador.Master.designer.cs">
+      <DependentUpon>operador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\reserva\crear.aspx.cs">
+      <DependentUpon>crear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\reserva\crear.aspx.designer.cs">
+      <DependentUpon>crear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\reserva\lista-reservas.aspx.cs">
+      <DependentUpon>lista-reservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\reserva\lista-reservas.aspx.designer.cs">
+      <DependentUpon>lista-reservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\reserva\ver-reserva.aspx.cs">
+      <DependentUpon>ver-reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\reserva\ver-reserva.aspx.designer.cs">
+      <DependentUpon>ver-reserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\salon\crear-incidente.aspx.cs">
+      <DependentUpon>crear-incidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\salon\crear-incidente.aspx.designer.cs">
+      <DependentUpon>crear-incidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\salon\editar-incidente.aspx.cs">
+      <DependentUpon>editar-incidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\salon\editar-incidente.aspx.designer.cs">
+      <DependentUpon>editar-incidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\salon\lista-incidentes.aspx.cs">
+      <DependentUpon>lista-incidentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\salon\lista-incidentes.aspx.designer.cs">
+      <DependentUpon>lista-incidentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\salon\lista-salones.aspx.cs">
+      <DependentUpon>lista-salones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\salon\lista-salones.aspx.designer.cs">
+      <DependentUpon>lista-salones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\salon\ver-reservas.aspx.cs">
+      <DependentUpon>ver-reservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\salon\ver-reservas.aspx.designer.cs">
+      <DependentUpon>ver-reservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\usuario\crear.aspx.cs">
+      <DependentUpon>crear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\usuario\crear.aspx.designer.cs">
+      <DependentUpon>crear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\usuario\editar.aspx.cs">
+      <DependentUpon>editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\usuario\editar.aspx.designer.cs">
+      <DependentUpon>editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\operador\usuario\lista.aspx.cs">
+      <DependentUpon>lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\operador\usuario\lista.aspx.designer.cs">
+      <DependentUpon>lista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\recuperar-cuenta.aspx.cs">
+      <DependentUpon>recuperar-cuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\recuperar-cuenta.aspx.designer.cs">
+      <DependentUpon>recuperar-cuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\registrar.aspx.cs">
+      <DependentUpon>registrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\registrar.aspx.designer.cs">
+      <DependentUpon>registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administrador\usuario\crear.aspx.cs">
+      <DependentUpon>crear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administrador\usuario\crear.aspx.designer.cs">
+      <DependentUpon>crear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administrador\usuario\editar.aspx.cs">
+      <DependentUpon>editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administrador\usuario\editar.aspx.designer.cs">
+      <DependentUpon>editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\administrador\usuario\lista.aspx.cs">
+      <DependentUpon>lista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\administrador\usuario\lista.aspx.designer.cs">
+      <DependentUpon>lista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="import\" />
+    <Folder Include="paginas\administrador\insumos\" />
+    <Folder Include="paginas\administrador\salon\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52277</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52277/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
